@@ -1,0 +1,444 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vibe Atelier | Vibe Coding 创作记录</title>
+    <meta
+      name="description"
+      content="Vibe Atelier 个人创作工作室，记录VibeCoding灵感、开发过程、成品作品与创作心得，液态玻璃极简风格创作记录站。"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23f7f8fb'/%3E%3Ccircle cx='22' cy='22' r='14' fill='%23111113'/%3E%3Ccircle cx='40' cy='40' r='18' fill='%234a7c68' fill-opacity='.92'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260828-detailfix1" />
+  </head>
+  <body data-view="home">
+    <div class="container">
+      <div class="app-shell">
+        <aside class="sidebar" aria-label="Vibe Atelier 创作相关导航，切换个人主页、创作理念、作品记录、制作过程和评论建议">
+          <div class="side-brand" aria-label="创作入口标识">
+            <span class="brand-orb" aria-hidden="true"></span>
+            <span>创作入口</span>
+          </div>
+
+          <nav class="side-nav" aria-label="创作内容视图导航">
+            <button class="nav-item active" type="button" data-view="home" aria-label="打开个人主页视图">
+              <span class="nav-icon" aria-hidden="true">⌂</span>
+              <span>个人主页</span>
+            </button>
+            <button class="nav-item" type="button" data-view="story" aria-label="打开创作理念与灵感来源视图">
+              <span class="nav-icon" aria-hidden="true">✦</span>
+              <span>创作理念</span>
+            </button>
+            <button class="nav-item" type="button" data-view="works" aria-label="打开全部作品记录视图">
+              <span class="nav-icon" aria-hidden="true">◌</span>
+              <span>作品记录</span>
+            </button>
+            <button class="nav-item" type="button" data-view="process" aria-label="打开完整制作流程记录视图">
+              <span class="nav-icon" aria-hidden="true">⌁</span>
+              <span>制作过程</span>
+            </button>
+            <button class="nav-item" type="button" data-view="feedback" aria-label="打开评论与建议收集视图">
+              <span class="nav-icon" aria-hidden="true">↗</span>
+              <span>评论建议</span>
+            </button>
+          </nav>
+
+          <div class="side-note glass-panel">
+            <h3>当前重点</h3>
+            <p>把 vibe coding 的灵感、过程和作品成长记录清楚地展示出来。</p>
+            <button class="work-action-btn side-action-btn" type="button" id="loginTrigger" aria-label="打开管理员登录窗口">
+              管理员登录
+            </button>
+          </div>
+        </aside>
+
+        <main class="main-stage">
+          <header class="top-title" aria-label="网站居中标题 Vibe Atelier">
+            <span>Vibe Atelier</span>
+          </header>
+
+          <section class="hero-profile" id="homeView" aria-labelledby="heroTitle">
+            <div class="avatar-shell" aria-label="作者头像，作者缩写 AY">
+              <div class="avatar-glass" aria-hidden="true">
+                <span>AY</span>
+              </div>
+            </div>
+            <h1 id="heroTitle"><span>Vibe Coding</span></h1>
+          </section>
+
+          <section class="focus-area glass-panel" aria-live="polite" aria-label="当前创作内容视图">
+            <div class="focus-header">
+              <div>
+                <p class="overline" id="viewKicker">welcome</p>
+                <h2 id="viewTitle">先快速了解我在做什么</h2>
+              </div>
+              <span class="soft-pill" aria-label="当前网站状态：公开记录中">公开记录中</span>
+            </div>
+
+            <div id="viewContent" class="view-content">
+              <p class="empty-hint">选择左侧导航，查看对应创作内容</p>
+
+              <section class="view-panel active" data-panel="home" aria-label="个人主页内容">
+                <article class="intro-card">
+                  <h3>Vibe Atelier 是什么</h3>
+                  <p>
+                    Vibe Atelier 记录我的 Vibe Coding 灵感、过程和作品。
+                  </p>
+                </article>
+                <div class="mini-grid" aria-label="主页快速了解">
+                  <article class="mini-card">
+                    <h3>灵感</h3>
+                    <p>保存想法来源。</p>
+                  </article>
+                  <article class="mini-card">
+                    <h3>过程</h3>
+                    <p>整理 prompt 与代码。</p>
+                  </article>
+                  <article class="mini-card">
+                    <h3>作品</h3>
+                    <p>展示成品与复盘。</p>
+                  </article>
+                </div>
+              </section>
+
+              <section class="view-panel" data-panel="story" hidden aria-label="创作理念与灵感来源内容">
+                <article class="story-hero-card" aria-label="Vibe Coding 创作总理念">
+                  <h3>核心理念</h3>
+                  <p>
+                    用 Vibe Coding 把灵感快速变成可体验的作品，再通过记录、复盘和反馈持续迭代。
+                  </p>
+                </article>
+                <div class="idea-scroll" aria-label="不同类型的 Vibe Coding 创作理念横向滑动列表">
+                  <article class="idea-card" aria-label="工具类创作理念">
+                    <h3>工具类</h3>
+                    <p>先解决一个真实的小问题，再补齐体验和可复用性。</p>
+                  </article>
+                  <article class="idea-card" aria-label="网站类创作理念">
+                    <h3>网站类</h3>
+                    <p>用清晰结构表达个人风格，让内容比装饰更重要。</p>
+                  </article>
+                  <article class="idea-card" aria-label="交互实验创作理念">
+                    <h3>交互实验</h3>
+                    <p>每次只验证一个交互想法，留下节奏、状态和失败尝试。</p>
+                  </article>
+                  <article class="idea-card" aria-label="AI 应用创作理念">
+                    <h3>AI 应用</h3>
+                    <p>把 AI 当成协作对象，重点记录判断、取舍和验收标准。</p>
+                  </article>
+                </div>
+              </section>
+
+              <section class="view-panel" data-panel="works" hidden aria-label="全部作品记录内容">
+                <div class="works-toolbar" aria-label="作品筛选与状态概览">
+                  <div class="works-filter" role="group" aria-label="作品筛选">
+                    <button class="work-filter-btn active" type="button" data-work-filter="all" aria-pressed="true">
+                      全部
+                      <span id="workCountAll">0</span>
+                    </button>
+                    <button class="work-filter-btn" type="button" data-work-filter="collected" aria-pressed="false">
+                      收藏
+                      <span id="workCountCollected">0</span>
+                    </button>
+                    <button class="work-filter-btn" type="button" data-work-filter="featured" aria-pressed="false">
+                      特别关注
+                      <span id="workCountFeatured">0</span>
+                    </button>
+                  </div>
+                  <p class="works-filter-hint" id="worksFilterHint">展示全部作品</p>
+                </div>
+                <div class="works-grid" aria-label="作品网格列表"></div>
+              </section>
+
+              <section class="view-panel" data-panel="process" hidden aria-label="完整制作流程记录内容">
+                <div class="timeline-shell">
+                  <article class="timeline-item">
+                    <h3>时间轴容器</h3>
+                    <p>这里预留从灵感、prompt、开发、调整到复盘的制作流程记录。</p>
+                  </article>
+                </div>
+              </section>
+
+              <section class="view-panel" data-panel="feedback" hidden aria-label="评论与建议收集内容">
+                <div class="placeholder-card">
+                  <h3>建议收集容器</h3>
+                  <p>这里预留评论和建议展示区域，后续接入真实数据与审核流程。</p>
+                </div>
+              </section>
+
+              <section class="view-panel" data-panel="admin" hidden aria-label="管理后台内容">
+                <div class="admin-shell glass-panel">
+                  <div class="admin-hero">
+                    <div>
+                      <p class="overline">dashboard</p>
+                      <h2>管理后台</h2>
+                      <p class="section-note">本地管理作品内容，保存后会实时刷新作品列表和详情页。</p>
+                    </div>
+                    <div class="work-detail-actions">
+                      <button class="work-action-btn side-action-btn" type="button" id="adminAddWorkBtn" aria-label="新增作品">
+                        新增作品
+                      </button>
+                      <button class="work-action-btn side-action-btn" type="button" id="adminLogoutBtn" aria-label="退出管理员登录">
+                        退出登录
+                      </button>
+                    </div>
+                  </div>
+                  <div class="admin-work-list" id="adminWorkList" aria-label="后台作品列表"></div>
+                  <div class="timeline-shell admin-grid" aria-label="后台数据工具占位">
+                    <article class="timeline-item admin-card">
+                      <h3>数据导入导出</h3>
+                      <p>下一步接入 JSON 备份与恢复。</p>
+                    </article>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <footer class="site-footer" aria-label="网站页脚">
+            <span>Vibe Atelier</span>
+            <span>Vibe Coding 创作记录站</span>
+          </footer>
+        </main>
+      </div>
+    </div>
+
+    <div
+      class="work-detail-modal"
+      id="workDetailModal"
+      hidden
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="workDetailTitle"
+      aria-describedby="workDetailReadme"
+    >
+      <div class="work-detail-backdrop" data-work-detail-close aria-hidden="true"></div>
+      <div class="work-detail-panel glass-panel" role="document">
+        <button class="work-detail-close" type="button" data-work-detail-close aria-label="关闭作品详情">
+          ×
+        </button>
+
+        <div class="work-detail-scroll">
+          <section class="work-detail-hero" aria-label="作品头部信息区">
+            <figure class="work-detail-cover">
+              <img id="workDetailImage" alt="作品主图预览" loading="lazy" />
+            </figure>
+
+            <div class="work-detail-meta">
+              <p class="overline">selected work</p>
+              <h2 id="workDetailTitle">作品标题</h2>
+              <p class="work-detail-date" id="workDetailDate">2026.07.18</p>
+
+              <div class="work-detail-tags" id="workDetailTags" aria-label="作品标签"></div>
+
+              <div class="work-detail-stats" aria-label="点赞与评论数据">
+                <div class="detail-stat">
+                  <strong id="workDetailLikeCount">0</strong>
+                  <span>点赞</span>
+                </div>
+                <div class="detail-stat">
+                  <strong id="workDetailCommentCount">0</strong>
+                  <span>评论</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="work-detail-section" aria-label="README介绍区">
+            <div class="section-head">
+              <div>
+                <p class="overline">README</p>
+                <h3>项目介绍</h3>
+              </div>
+              <p class="section-note">仿 GitHub README 的阅读节奏</p>
+            </div>
+            <div id="workDetailReadme" class="work-readme"></div>
+          </section>
+
+          <section class="work-detail-section" aria-label="关键代码片段展示区">
+            <div class="section-head">
+              <div>
+                <p class="overline">CODE</p>
+                <h3>关键代码片段</h3>
+              </div>
+              <p class="section-note">先展示这个项目的核心实现，后续可继续替换</p>
+            </div>
+            <div id="workDetailSnippets" class="code-snippet-list" aria-label="关键代码片段列表"></div>
+          </section>
+
+          <section class="work-detail-section" aria-label="开源文件配置区">
+            <div class="section-head">
+              <div>
+                <p class="overline">FILES</p>
+                <h3>文件配置</h3>
+              </div>
+              <p class="section-note">静态展示，不做跳转</p>
+            </div>
+            <div id="workDetailFiles" class="file-list" role="list" aria-label="项目文件列表"></div>
+          </section>
+
+          <section class="work-detail-section" aria-label="互动评论区">
+            <div class="section-head section-head--stack">
+              <div>
+                <p class="overline">INTERACT</p>
+                <h3>互动评论</h3>
+              </div>
+              <div class="work-detail-actions" aria-label="作品互动操作">
+                <button
+                  class="work-action-btn work-like-btn"
+                  id="workDetailLikeButton"
+                  type="button"
+                  aria-label="点赞作品"
+                >
+                  <span class="like-icon" aria-hidden="true">♡</span>
+                  <span>点赞</span>
+                  <strong id="workDetailLikeButtonCount">0</strong>
+                </button>
+                <button
+                  class="work-action-btn"
+                  id="workDetailCollectButton"
+                  type="button"
+                  aria-label="收藏作品"
+                >
+                  <span aria-hidden="true">☆</span>
+                  <span>收藏</span>
+                </button>
+                <button
+                  class="work-action-btn"
+                  id="workDetailFeatureButton"
+                  type="button"
+                  aria-label="特别关注作品"
+                >
+                  <span aria-hidden="true">✦</span>
+                  <span>关注</span>
+                </button>
+              </div>
+            </div>
+            <p class="section-note">点赞会保存在本地浏览器。</p>
+            <div id="workDetailComments" class="comment-list" aria-label="评论列表"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="work-detail-modal auth-modal"
+      id="authModal"
+      hidden
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="authTitle"
+    >
+      <div class="auth-backdrop" data-auth-close aria-hidden="true"></div>
+      <div class="work-detail-panel glass-panel auth-panel" role="document">
+        <button class="work-detail-close auth-close" type="button" data-auth-close aria-label="关闭登录窗口">
+          ×
+        </button>
+        <div class="work-detail-scroll auth-content">
+          <div class="auth-copy">
+            <p class="overline">admin access</p>
+            <h2 id="authTitle">管理员登录</h2>
+            <p class="section-note">默认账号：admin / 123456</p>
+          </div>
+          <form class="auth-form" id="authForm">
+            <label class="auth-field">
+              <span>用户名</span>
+              <input type="text" name="username" id="authUsername" autocomplete="username" required />
+            </label>
+            <label class="auth-field">
+              <span>密码</span>
+              <input type="password" name="password" id="authPassword" autocomplete="current-password" required />
+            </label>
+            <p class="auth-error" id="authError" hidden></p>
+            <button class="auth-submit" type="submit">登录后台</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="work-detail-modal"
+      id="workEditorModal"
+      hidden
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="workEditorTitle"
+    >
+      <div class="work-detail-backdrop" data-work-editor-close aria-hidden="true"></div>
+      <div class="work-detail-panel glass-panel admin-editor-panel" role="document">
+        <button class="work-detail-close" type="button" data-work-editor-close aria-label="关闭作品编辑表单">
+          ×
+        </button>
+        <form class="work-detail-scroll admin-form" id="workEditorForm">
+          <div class="section-head">
+            <div>
+              <p class="overline">content editor</p>
+              <h2 id="workEditorTitle">新增作品</h2>
+              <p class="section-note">保存后写入本地浏览器，并刷新作品列表与详情页。</p>
+            </div>
+            <button class="work-action-btn" type="submit">保存作品</button>
+          </div>
+
+          <input type="hidden" id="workEditorId" name="id" />
+
+          <section class="work-detail-section" aria-label="基础信息">
+            <div class="admin-form-grid">
+              <label class="auth-field">
+                <span>标题</span>
+                <input type="text" id="workEditorTitleInput" name="title" required />
+              </label>
+              <label class="auth-field">
+                <span>日期</span>
+                <input type="date" id="workEditorDate" name="date" required />
+              </label>
+              <label class="auth-field admin-form-wide">
+                <span>标签（逗号分隔）</span>
+                <input type="text" id="workEditorTags" name="tags" placeholder="个人网站, Vibe Coding, 工具" />
+              </label>
+              <label class="auth-field admin-form-wide">
+                <span>封面图 data URL / 路径</span>
+                <input type="text" id="workEditorCover" name="coverImage" />
+              </label>
+              <label class="auth-field admin-form-wide">
+                <span>简介 summary</span>
+                <textarea id="workEditorSummary" name="summary" rows="3" required></textarea>
+              </label>
+              <label class="auth-field admin-form-wide">
+                <span>README Markdown</span>
+                <textarea id="workEditorReadme" name="readme" rows="8"></textarea>
+              </label>
+            </div>
+          </section>
+
+          <section class="work-detail-section" aria-label="代码片段编辑">
+            <div class="section-head">
+              <div>
+                <p class="overline">code snippets</p>
+                <h3>关键代码片段</h3>
+              </div>
+              <button class="work-action-btn" type="button" id="addSnippetBtn">添加片段</button>
+            </div>
+            <div class="admin-snippet-list" id="snippetEditorList" aria-label="代码片段表单列表"></div>
+          </section>
+
+          <section class="work-detail-section" aria-label="文件树 JSON 编辑">
+            <label class="auth-field">
+              <span>fileTree JSON</span>
+              <textarea id="workEditorFileTree" name="fileTree" rows="8"></textarea>
+            </label>
+          </section>
+
+          <p class="auth-error" id="workEditorError" hidden></p>
+        </form>
+      </div>
+    </div>
+
+    <script src="worksData.js?v=20260828-detailfix1"></script>
+    <script src="script.js?v=20260828-detailfix1"></script>
+  </body>
+</html>
